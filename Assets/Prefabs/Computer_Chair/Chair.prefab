@@ -175,8 +175,14 @@ PrefabInstance:
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: 7151a5ffd5bf4954fbfb77b20713a4e8, type: 2}
+    - target: {fileID: 8089062573417005363, guid: 79e84ca5f7b365a42a7ac73772feca2b,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 7151a5ffd5bf4954fbfb77b20713a4e8, type: 2}
     m_RemovedComponents: []
-    m_RemovedGameObjects: []
+    m_RemovedGameObjects:
+    - {fileID: -5568371526223589888, guid: 79e84ca5f7b365a42a7ac73772feca2b, type: 3}
     m_AddedGameObjects: []
     m_AddedComponents:
     - targetCorrespondingSourceObject: {fileID: -8391222552659086748, guid: 79e84ca5f7b365a42a7ac73772feca2b,
@@ -199,10 +205,6 @@ PrefabInstance:
         type: 3}
       insertIndex: -1
       addedObject: {fileID: 7118724941290153901}
-    - targetCorrespondingSourceObject: {fileID: -5568371526223589888, guid: 79e84ca5f7b365a42a7ac73772feca2b,
-        type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 4912936231300637636}
     - targetCorrespondingSourceObject: {fileID: 8513859187771203891, guid: 79e84ca5f7b365a42a7ac73772feca2b,
         type: 3}
       insertIndex: -1
@@ -383,33 +385,6 @@ CapsuleCollider:
   m_Height: 2.55
   m_Direction: 2
   m_Center: {x: 0, y: 0, z: -0.00000011920929}
---- !u!1 &2558478840326576829 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: -5568371526223589888, guid: 79e84ca5f7b365a42a7ac73772feca2b,
-    type: 3}
-  m_PrefabInstance: {fileID: 1240919175473386685}
-  m_PrefabAsset: {fileID: 0}
---- !u!65 &4912936231300637636
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2558478840326576829}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Size: {x: 9.347369, y: 3.3333333, z: 2.0303771}
-  m_Center: {x: -3.648813, y: 0.00000084294015, z: -1.1942738}
 --- !u!1 &2618205328254074005 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 3849762623622064168, guid: 79e84ca5f7b365a42a7ac73772feca2b,
