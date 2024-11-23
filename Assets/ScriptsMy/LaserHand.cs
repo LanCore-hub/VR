@@ -11,17 +11,22 @@ public class LaserHand : SteamVR_LaserPointer
     public GameObject redPointPrefab; // Красная точка
     private GameObject currentRedPoint; // Текущая точка
 
-    public LineRenderer greenLaser; // Зелёный луч
-    public float beamLeagth = 5f; // Длина луча
-    private LineRenderer currentBeam; // Переменная для текущего луча
-
     private bool isGrab;
 
     [Header("Соединение точек")]
-    public GameObject point1;
-    public GameObject point2;
+    public LineRenderer greenLaser; // Зелёный луч
+    //public float beamLeagth = 5f; // Длина луча
+    private LineRenderer currentBeam; // Переменная для текущего луча
+    private GameObject point1;
+    private GameObject point2;
     public bool isConnecting;
     public Button connectButton;
+    public GameObject stickPrefab;
+    private GameObject currentStick;
+
+    [Header("Удаление точек и соединений")]
+    public bool isDeleting;
+    public Button deleteButton;
 
     public override void OnPointerIn(PointerEventArgs e)
     {
@@ -48,7 +53,29 @@ public class LaserHand : SteamVR_LaserPointer
             Instantiate(redPointPrefab, GetLaserPosition(), UnityEngine.Quaternion.identity);
         }
 
-        if (e.target != null && e.target.CompareTag("ConnectButton"))
+        if (e.target.CompareTag("DeleteButton"))
+        {
+            isDeleting = !isDeleting;
+            if (isDeleting)
+            {
+                deleteButton.GetComponent<Image>().color = Color.green;
+            }
+            else
+            {
+                deleteButton.GetComponent<Image>().color = Color.red;
+            }
+        }
+        else if (isDeleting)
+        {
+            if (e.target.CompareTag("RedPoint") || e.target.CompareTag("Connection"))
+            {
+                Destroy(e.target.gameObject);
+            }
+            isDeleting = false;
+            deleteButton.GetComponent<Image>().color = Color.red;
+        }
+
+        else if (e.target != null && e.target.CompareTag("ConnectButton"))
         {
             isConnecting = !isConnecting;
             if (isConnecting)
@@ -72,9 +99,19 @@ public class LaserHand : SteamVR_LaserPointer
 
                 if (point1 != point2)
                 {
-                    currentBeam = Instantiate(greenLaser, GetLaserPosition(), UnityEngine.Quaternion.identity);
-                    currentBeam.SetPosition(0, point1.transform.position);
-                    currentBeam.SetPosition(1, point2.transform.position);
+                    // Лазер
+                    //currentBeam = Instantiate(greenLaser, GetLaserPosition(), UnityEngine.Quaternion.identity);
+                    //currentBeam.SetPosition(0, point1.transform.position);
+                    //currentBeam.SetPosition(1, point2.transform.position);
+
+                    // Палки
+                    UnityEngine.Vector3 direction = point2.transform.position - point1.transform.position;
+                    float distance = direction.magnitude;
+
+                    currentStick = Instantiate(stickPrefab, point1.transform.position, UnityEngine.Quaternion.identity);
+                    currentStick.transform.localScale = new UnityEngine.Vector3(0.1f, 0.1f, distance);
+                    currentStick.transform.rotation = UnityEngine.Quaternion.LookRotation(direction);
+                    currentStick.transform.position = point1.transform.position + direction / 2f;
                 }
                 point1 = null;
                 point2 = null;

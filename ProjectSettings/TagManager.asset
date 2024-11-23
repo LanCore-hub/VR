@@ -9,6 +9,8 @@ TagManager:
   - Map
   - ButtonUIMap
   - ConnectButton
+  - Connection
+  - DeleteButton
   layers:
   - Default
   - TransparentFX
