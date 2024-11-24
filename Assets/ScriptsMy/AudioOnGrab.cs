@@ -13,7 +13,7 @@ public class AudioOnGrab : MonoBehaviour
     private bool isPlaying2;
     private bool isPlaying3;
     private bool isPlaying4;
-    private bool koltso;
+    public bool koltso;
 
     private SteamVR_Action_Boolean m_Grip;
     private SteamVR_Behaviour_Pose m_Pose;
@@ -49,9 +49,9 @@ public class AudioOnGrab : MonoBehaviour
         }
 
         Transform ognetushitelObject = gameObject.transform.Find("ognetushitel");
-        if (ognetushitelObject.transform.Find("koltso"))
+        if (ognetushitelObject != null && ognetushitelObject.Find("koltso"))
             koltso = true;
-        else koltso = false;
+        else if (ognetushitelObject != null) koltso = false;
 
         if (ognetushitelObject != null && !isPlaying2)
         {
@@ -65,7 +65,7 @@ public class AudioOnGrab : MonoBehaviour
         }
         else if (ognetushitelObject != null && m_Grip.GetStateDown(m_Pose.inputSource) && !koltso)
         {
-            GameObject ParticleSystem = ognetushitelObject.transform.Find("Particle System").gameObject;
+            GameObject ParticleSystem = ognetushitelObject.Find("Particle System").gameObject;
             ParticleSystem.SetActive(true);
             ParticleSystem.GetComponent<ParticleSystem>().Play();
         }
