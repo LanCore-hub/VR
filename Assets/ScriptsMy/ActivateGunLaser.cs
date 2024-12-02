@@ -8,6 +8,8 @@ public class ActivateGunLaser : MonoBehaviour
     public GameObject laser;
     public bool laserEnable;
 
+    public bool fire;
+
     private SteamVR_Action_Boolean m_Trigger;
     private SteamVR_Behaviour_Pose m_Pose;
 
@@ -21,22 +23,24 @@ public class ActivateGunLaser : MonoBehaviour
     void Start()
     {
         laserEnable = false;
+        fire = false;
     }
 
     void Update()
     {
         if (m_Trigger.GetStateDown(m_Pose.inputSource))
         {
-            laserEnable = !laserEnable;
+            //laserEnable = !laserEnable;
+            fire = true;
         }
 
-        if (laserEnable)
-        {
-            laser.GetComponent<LaserSight>().laserDistance = 100;
-        }
-        else
-        {
-            laser.GetComponent<LaserSight>().laserDistance = 0;
-        }
+        //if (laserEnable)
+        //{
+        //    laser.GetComponent<LaserSight>().laserDistance = 100;
+        //}
+        //else
+        //{
+        //    laser.GetComponent<LaserSight>().laserDistance = 0;
+        //}
     }
 }
