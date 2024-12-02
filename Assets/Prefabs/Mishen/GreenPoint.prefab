@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 7544684829833692745}
   - component: {fileID: 5263777759061695934}
   - component: {fileID: 8742114022513237327}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: GreenPoint
   m_TagString: RedPoint
   m_Icon: {fileID: 0}

@@ -52390,7 +52390,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4d86260e4b386fc45be43b4e1126a56a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  laserColor: {r: 1, g: 0, b: 0, a: 0}
+  laserColor: {r: 1, g: 0, b: 0, a: 1}
   laserDistance: 100
   laserWidth: 0.01
   bulletHolePrefab: {fileID: 958890643244661119, guid: 3e7886cb724d82043be2b67238869472,
