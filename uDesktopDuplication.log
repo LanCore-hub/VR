@@ -1,0 +1,15 @@
+[uDD::Log][2024-12-08 11:17:39] Start
+[uDD::Log][2024-12-08 11:17:39] OS Version    : 10.0
+[uDD::Log][2024-12-08 11:17:39] Build Number  : 19045
+[uDD::Log][2024-12-08 11:17:39] Service Pack  : 
+[uDD::Log][2024-12-08 11:17:39] Graphics Card [0] : NVIDIA GeForce RTX 3090
+[uDD::Log][2024-12-08 11:17:39]   > Monitor[0] : \\.\DISPLAY1
+[uDD::Log][2024-12-08 11:17:39] Graphics Card [1] : Intel(R) UHD Graphics 750
+[uDD::Log][2024-12-08 11:17:39] Graphics Card [2] : Microsoft Basic Render Driver
+[uDD::Log][2024-12-08 11:17:39] Monitor::Initialized() =>
+[uDD::Log][2024-12-08 11:17:39]     ID    : 0
+[uDD::Log][2024-12-08 11:17:39]     Size  : (3440, 1440)
+[uDD::Log][2024-12-08 11:17:39]     DPI   : (109, 109)
+[uDD::Log][2024-12-08 11:17:39]     Rot   : Landscape
+[uDD::Log][2024-12-08 11:17:39] Duplicator::Initialize() => OK.
+[uDD::Log][2024-12-08 11:17:57] Stop
