@@ -6,6 +6,7 @@ using Valve.VR.InteractionSystem;
 
 public class Video : MonoBehaviour
 {
+    public GameObject GameObject;
     public HoverButton hoverButton;
     public VideoPlayer videoPlayer; // Ссылка на Video Player
     private bool videoPlayed = false; // Флаг для отслеживания воспроизведения
@@ -22,6 +23,7 @@ public class Video : MonoBehaviour
 
     private void OnButtonDown(Hand hand)
     {
+        GameObject.SetActive(true);
         if (!videoPlayed)
         {
             videoPlayer.Play();
