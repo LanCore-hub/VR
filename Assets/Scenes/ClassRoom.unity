@@ -13020,6 +13020,11 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1763690151}
     m_Modifications:
+    - target: {fileID: 1086268828720876197, guid: 1a2fc4a6c37519b438a835738a032f2b,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 6741118248084529729, guid: 1a2fc4a6c37519b438a835738a032f2b,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -13074,6 +13079,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: VROch
+      objectReference: {fileID: 0}
+    - target: {fileID: 7177542194352349639, guid: 1a2fc4a6c37519b438a835738a032f2b,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
