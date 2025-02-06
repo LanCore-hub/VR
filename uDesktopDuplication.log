@@ -1,15 +1,15 @@
-[uDD::Log][2025-01-21 09:59:57] Start
-[uDD::Log][2025-01-21 09:59:57] OS Version    : 10.0
-[uDD::Log][2025-01-21 09:59:57] Build Number  : 19045
-[uDD::Log][2025-01-21 09:59:57] Service Pack  : 
-[uDD::Log][2025-01-21 09:59:57] Graphics Card [0] : NVIDIA GeForce RTX 3090
-[uDD::Log][2025-01-21 09:59:57]   > Monitor[0] : \\.\DISPLAY1
-[uDD::Log][2025-01-21 09:59:57] Graphics Card [1] : Intel(R) UHD Graphics 750
-[uDD::Log][2025-01-21 09:59:57] Graphics Card [2] : Microsoft Basic Render Driver
-[uDD::Log][2025-01-21 09:59:57] Monitor::Initialized() =>
-[uDD::Log][2025-01-21 09:59:57]     ID    : 0
-[uDD::Log][2025-01-21 09:59:57]     Size  : (3440, 1440)
-[uDD::Log][2025-01-21 09:59:57]     DPI   : (109, 109)
-[uDD::Log][2025-01-21 09:59:57]     Rot   : Landscape
-[uDD::Log][2025-01-21 09:59:57] Duplicator::Initialize() => OK.
-[uDD::Log][2025-01-21 10:00:08] Stop
+[uDD::Log][2025-02-05 12:21:51] Start
+[uDD::Log][2025-02-05 12:21:51] OS Version    : 10.0
+[uDD::Log][2025-02-05 12:21:51] Build Number  : 19045
+[uDD::Log][2025-02-05 12:21:51] Service Pack  : 
+[uDD::Log][2025-02-05 12:21:51] Graphics Card [0] : NVIDIA GeForce RTX 3090
+[uDD::Log][2025-02-05 12:21:51]   > Monitor[0] : \\.\DISPLAY1
+[uDD::Log][2025-02-05 12:21:51] Graphics Card [1] : Intel(R) UHD Graphics 750
+[uDD::Log][2025-02-05 12:21:51] Graphics Card [2] : Microsoft Basic Render Driver
+[uDD::Log][2025-02-05 12:21:51] Monitor::Initialized() =>
+[uDD::Log][2025-02-05 12:21:51]     ID    : 0
+[uDD::Log][2025-02-05 12:21:51]     Size  : (3440, 1440)
+[uDD::Log][2025-02-05 12:21:51]     DPI   : (109, 109)
+[uDD::Log][2025-02-05 12:21:51]     Rot   : Landscape
+[uDD::Log][2025-02-05 12:21:51] Duplicator::Initialize() => OK.
+[uDD::Log][2025-02-05 12:22:19] Stop
