@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
+using UnityEngine.Rendering.UI;
 using Valve.VR;
 
 public class LaserSight : MonoBehaviour
@@ -11,6 +12,7 @@ public class LaserSight : MonoBehaviour
     public float laserWidth = 0.1f;
     public GameObject bulletHolePrefab;
     public GameObject TextScore;
+    public GameObject smoke;
 
     private LineRenderer lineRenderer;
     public GameObject rightHand;
@@ -27,7 +29,6 @@ public class LaserSight : MonoBehaviour
 
     void Start()
     {
-        // Создаём компонент LineRenderer
         lineRenderer = gameObject.AddComponent<LineRenderer>();
         lineRenderer.material = new Material(Shader.Find("Sprites/Default"));
         lineRenderer.startWidth = laserWidth;
@@ -78,6 +79,15 @@ public class LaserSight : MonoBehaviour
                 else if (hit.transform.CompareTag("10"))
                 {
                     TextScore.GetComponent<TextMeshProUGUI>().SetText("Score: 10");
+                }
+
+                if (hit.transform.CompareTag("plate"))
+                {
+                    Destroy(bullet);
+                    GameObject plateGameObject = hit.transform.gameObject;
+                    GameObject Smoke = Instantiate(smoke, plateGameObject.transform.position, Quaternion.identity);
+                    Destroy(Smoke, 10f);
+                    Destroy(plateGameObject);
                 }
             }
         }

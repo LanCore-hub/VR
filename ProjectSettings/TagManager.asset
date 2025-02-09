@@ -18,6 +18,7 @@ TagManager:
   - 8
   - 9
   - 10
+  - plate
   layers:
   - Default
   - TransparentFX
