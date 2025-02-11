@@ -86,7 +86,7 @@ public class LaserSight : MonoBehaviour
                     Destroy(bullet);
                     GameObject plateGameObject = hit.transform.gameObject;
                     GameObject Smoke = Instantiate(smoke, plateGameObject.transform.position, Quaternion.identity);
-                    Destroy(Smoke, 10f);
+                    Destroy(Smoke, 8f);
                     Destroy(plateGameObject);
                 }
             }
