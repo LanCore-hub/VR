@@ -11,8 +11,11 @@ public class PlateSpawner : MonoBehaviour
     public float minAngel;
     public float maxAngel;
 
+    private AudioSource createPlateSound;
+
     private void Start()
     {
+        createPlateSound = gameObject.GetComponent<AudioSource>();
         StartCoroutine(SpawnPlateCoroutine());
     }
 
@@ -29,6 +32,7 @@ public class PlateSpawner : MonoBehaviour
 
     void SpawnPlate()
     {
+        createPlateSound.Play();
         Quaternion fixedRotation = Quaternion.Euler(0, -90, 90);
         GameObject plate = Instantiate(platePrefab, transform.position, fixedRotation);
         Rigidbody rb = plate.GetComponent<Rigidbody>();

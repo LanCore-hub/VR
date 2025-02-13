@@ -19,6 +19,8 @@ TagManager:
   - 9
   - 10
   - plate
+  - Score Clear
+  - Score Clear Places
   layers:
   - Default
   - TransparentFX
