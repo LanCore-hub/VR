@@ -39,6 +39,7 @@ public class AudioOnGrab : MonoBehaviour
     {
         Transform kaskaObject = gameObject.transform.Find("kaska");
         if (kaskaObject != null && !isPlaying1) {
+            kaskaAudioSource = kaskaObject.GetComponent<AudioSource>();
             kaskaAudioSource.Play();
             isPlaying1 = true;
         }
@@ -55,6 +56,7 @@ public class AudioOnGrab : MonoBehaviour
 
         if (ognetushitelObject != null && !isPlaying2)
         {
+            ognetushitelAudioSource = ognetushitelObject.GetComponent<AudioSource>();
             ognetushitelAudioSource.Play();
             isPlaying2 = true;
         }
@@ -83,6 +85,7 @@ public class AudioOnGrab : MonoBehaviour
         Transform spetsobuvlObject = gameObject.transform.Find("spetsobuv");
         if (spetsobuvlObject != null && !isPlaying3)
         {
+            spetsobuvAudioSource = spetsobuvlObject.GetComponent<AudioSource>();
             spetsobuvAudioSource.Play();
             isPlaying3 = true;
         }
@@ -95,6 +98,7 @@ public class AudioOnGrab : MonoBehaviour
         Transform VRObject = gameObject.transform.Find("VROch");
         if (VRObject != null && !isPlaying4)
         {
+            VRAudioSource = VRObject.GetComponent<AudioSource>();
             VRAudioSource.Play();
             isPlaying4 = true;
         }

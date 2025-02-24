@@ -21,6 +21,7 @@ TagManager:
   - plate
   - Score Clear
   - Score Clear Places
+  - LoadClassRoom
   layers:
   - Default
   - TransparentFX
