@@ -30,6 +30,8 @@ public class LaserSight : MonoBehaviour
     private SteamVR_Action_Boolean m_Trigger;
     private SteamVR_Behaviour_Pose m_Pose;
 
+    public ViolationSystem violationSystem;
+
     private void Awake()
     {
         m_Trigger = SteamVR_Actions._default.InteractUI;
@@ -126,6 +128,10 @@ public class LaserSight : MonoBehaviour
                     Destroy(plateGameObject);
                     AllPlaces++;
                     DistancePlaceText.GetComponent<TextMeshProUGUI>().text = "Дистанция: " + Vector3.Distance(transform.position, hit.point).ToString();
+                    break;
+                case "Person":
+                    violationSystem.AddViolation();
+                    Destroy(hit.transform.gameObject);
                     break;
             }
             AllScoreText.GetComponent<TextMeshProUGUI>().text = "Общий счёт: " + AllScore.ToString();

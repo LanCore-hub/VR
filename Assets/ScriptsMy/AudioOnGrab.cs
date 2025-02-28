@@ -5,10 +5,11 @@ using Valve.VR;
 
 public class AudioOnGrab : MonoBehaviour
 {
-    public AudioSource kaskaAudioSource;
-    public AudioSource ognetushitelAudioSource;
-    public AudioSource spetsobuvAudioSource;
-    public AudioSource VRAudioSource;
+    private AudioSource kaskaAudioSource;
+    private AudioSource ognetushitelAudioSource;
+    private AudioSource spetsobuvAudioSource;
+    private AudioSource VRAudioSource;
+    private ParticleSystem ognetushitelParticleSystem;
     private bool isPlaying1;
     private bool isPlaying2;
     private bool isPlaying3;
@@ -57,6 +58,7 @@ public class AudioOnGrab : MonoBehaviour
         if (ognetushitelObject != null && !isPlaying2)
         {
             ognetushitelAudioSource = ognetushitelObject.GetComponent<AudioSource>();
+            ognetushitelParticleSystem = ognetushitelObject.transform.Find("Particle System").GetComponent<ParticleSystem>();
             ognetushitelAudioSource.Play();
             isPlaying2 = true;
         }
@@ -79,6 +81,7 @@ public class AudioOnGrab : MonoBehaviour
         else if (ognetushitelObject == null && isPlaying2)
         {
             ognetushitelAudioSource.Stop();
+            ognetushitelParticleSystem.Stop(false);
             isPlaying2 = false;
         }
 

@@ -1230,9 +1230,10 @@ GameObject:
   - component: {fileID: 792044122871530429}
   - component: {fileID: 3360853370295859538}
   - component: {fileID: 833132941046560601}
+  - component: {fileID: 5084304691664517431}
   m_Layer: 0
   m_Name: Female Walk (1)
-  m_TagString: Untagged
+  m_TagString: Person
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1327,6 +1328,29 @@ NavMeshAgent:
   m_BaseOffset: 0
   m_WalkableMask: 4294967295
   m_ObstacleAvoidanceType: 4
+--- !u!136 &5084304691664517431
+CapsuleCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3565940028987661186}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Radius: 0.67
+  m_Height: 3.7954893
+  m_Direction: 1
+  m_Center: {x: 0, y: 1.8654313, z: 0.17}
 --- !u!1 &3654858965692856537
 GameObject:
   m_ObjectHideFlags: 0

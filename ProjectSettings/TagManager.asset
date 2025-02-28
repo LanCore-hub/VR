@@ -22,6 +22,10 @@ TagManager:
   - Score Clear
   - Score Clear Places
   - LoadClassRoom
+  - Person
+  - Rubbish
+  - Fridge
+  - Meat
   layers:
   - Default
   - TransparentFX
