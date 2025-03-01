@@ -24,8 +24,13 @@ TagManager:
   - LoadClassRoom
   - Person
   - Rubbish
-  - Fridge
   - Meat
+  - Flammable_object
+  - Fridge
+  - Plate
+  - Tumbochka
+  - Door
+  - Extinguish
   layers:
   - Default
   - TransparentFX
@@ -34,7 +39,7 @@ TagManager:
   - Water
   - UI
   - Sphere360
-  - 
+  - On_fire
   - 
   - 
   - 
