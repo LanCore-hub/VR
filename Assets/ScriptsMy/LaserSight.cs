@@ -1,3 +1,4 @@
+using DigitalRuby.RainMaker;
 using System.Collections;
 using System.Collections.Generic;
 using TMPro;
@@ -31,6 +32,8 @@ public class LaserSight : MonoBehaviour
     private SteamVR_Behaviour_Pose m_Pose;
 
     public ViolationSystem violationSystem;
+    private bool isViolationCooldown;
+    private RainScript rainScript;
 
     private void Awake()
     {
@@ -51,6 +54,8 @@ public class LaserSight : MonoBehaviour
         lineRenderer.endWidth = laserWidth;
         lineRenderer.startColor = laserColor;
         lineRenderer.endColor = laserColor;
+
+        rainScript = FindObjectOfType<RainScript>();
     }
 
     void Update()
@@ -69,7 +74,13 @@ public class LaserSight : MonoBehaviour
             {
                 gunSound.Play();
                 rightHand.GetComponent<ActivateGunLaser>().fire = false;
+                violationSystem.AddViolation();
                 return;
+            }
+
+            if (rainScript != null && rainScript.RainIntensity > 0)
+            {
+                violationSystem.AddViolation();
             }
 
             gunSound.Play();
@@ -137,5 +148,20 @@ public class LaserSight : MonoBehaviour
             AllScoreText.GetComponent<TextMeshProUGUI>().text = "Общий счёт: " + AllScore.ToString();
             ScorePlacesText.GetComponent<TextMeshProUGUI>().text = "Тарелок сбито: " + AllPlaces.ToString();
         }
+        else
+        {
+            if (laserHit && hit.transform.CompareTag("Person") && !isViolationCooldown)
+            {
+                StartCoroutine(TimeBetweenViolations());
+            }
+        }
+    }
+
+    IEnumerator TimeBetweenViolations()
+    {
+        isViolationCooldown = true;
+        violationSystem.AddViolation();
+        yield return new WaitForSeconds(5f);
+        isViolationCooldown = false;
     }
 }

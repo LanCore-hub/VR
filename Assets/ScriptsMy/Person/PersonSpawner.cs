@@ -17,7 +17,7 @@ public class PersonSpawner : MonoBehaviour
     {
         while (true)
         {
-            float delay = Random.Range(2f, 5f);
+            float delay = Random.Range(30f, 60f);
 
             yield return new WaitForSeconds(delay);
 
