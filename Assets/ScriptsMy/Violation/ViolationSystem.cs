@@ -33,7 +33,7 @@ public class ViolationSystem : MonoBehaviour
     public void EnforceRules()
     {
         Debug.Log("Превышено количество нарушений. Игрок отправлен читать правила.");
-        loadScene.LoadSceneMethod("SampleScene1");
+        loadScene.LoadSceneMethod("ReadRulesRoom");
     }
 
     public int GetCurrentViolations()

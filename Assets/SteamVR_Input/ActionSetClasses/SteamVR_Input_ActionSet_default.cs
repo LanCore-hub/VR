@@ -105,6 +105,22 @@ namespace Valve.VR
             }
         }
         
+        public virtual SteamVR_Action_Boolean reload
+        {
+            get
+            {
+                return SteamVR_Actions.default_reload;
+            }
+        }
+        
+        public virtual SteamVR_Action_Boolean upload
+        {
+            get
+            {
+                return SteamVR_Actions.default_upload;
+            }
+        }
+        
         public virtual SteamVR_Action_Vibration Haptic
         {
             get

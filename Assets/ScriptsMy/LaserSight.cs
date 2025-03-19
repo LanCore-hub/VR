@@ -19,7 +19,7 @@ public class LaserSight : MonoBehaviour
     public GameObject rightHand;
 
     public AudioSource gunSound;
-    private int AllScore;
+    public int AllScore;
     public GameObject AllScoreText;
     public GameObject DistanceText;
 

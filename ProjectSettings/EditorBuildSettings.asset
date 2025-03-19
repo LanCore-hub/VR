@@ -5,7 +5,7 @@ EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Scenes:
-  - enabled: 0
+  - enabled: 1
     path: Assets/Scenes/SampleScene.unity
     guid: 99c9720ab356a0642a771bea13969a05
   - enabled: 1
@@ -17,6 +17,15 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/SampleScene1.unity
     guid: 897d645d13a4a0943a66bac052aabf1b
+  - enabled: 1
+    path: Assets/Scenes/Choose.unity
+    guid: 69b704bfc21f1b84ca0c9eab948fc2f7
+  - enabled: 1
+    path: Assets/Scenes/ReadRulesRoom.unity
+    guid: afba57a9ce7fe5648b89774447906c43
+  - enabled: 1
+    path: Assets/Scenes/MishenNormativ.unity
+    guid: 9887076e698527747b94b95702884a00
   m_configObjects:
     Unity.XR.OpenVR.Settings: {fileID: 11400000, guid: f921fe24ec4cfe44296a2b27510d28ca,
       type: 2}

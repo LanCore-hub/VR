@@ -1,11 +1,10 @@
-using Microsoft.Unity.VisualStudio.Editor;
 using System.Collections;
 using UnityEngine;
 using UnityEngine.UI;
 
 public class ViolationEffect : MonoBehaviour
 {
-    public UnityEngine.UI.Image flashImage;
+    public Image flashImage;
     public Color flashColor = new Color(1, 0, 0, 0.5f);
     public float flashDuration = 0.5f;
 
