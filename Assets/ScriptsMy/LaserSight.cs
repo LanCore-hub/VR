@@ -8,7 +8,7 @@ using Valve.VR;
 
 public class LaserSight : MonoBehaviour
 {
-    public Color laserColor = Color.red;
+    public Color laserColor = Color.clear;
     public float laserDistance = 100f;
     public float laserWidth = 0.1f;
     public GameObject bulletHolePrefab;
@@ -50,6 +50,7 @@ public class LaserSight : MonoBehaviour
 
         lineRenderer = gameObject.AddComponent<LineRenderer>();
         lineRenderer.material = new Material(Shader.Find("Sprites/Default"));
+        laserColor.a = 0f;
         lineRenderer.startWidth = laserWidth;
         lineRenderer.endWidth = laserWidth;
         lineRenderer.startColor = laserColor;

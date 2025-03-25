@@ -14564,7 +14564,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   hoverButton: {fileID: 1401066283}
   loadScene: {fileID: 888292773}
-  NameLoadScene: Mishen
+  NameLoadScene: Choose
 --- !u!1 &770808142
 GameObject:
   m_ObjectHideFlags: 0
