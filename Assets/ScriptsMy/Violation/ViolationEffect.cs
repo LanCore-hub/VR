@@ -39,3 +39,4 @@ public class ViolationEffect : MonoBehaviour
         flashImage.color = Color.clear;
     }
 }
+

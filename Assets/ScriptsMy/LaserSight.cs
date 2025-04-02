@@ -27,20 +27,11 @@ public class LaserSight : MonoBehaviour
     public GameObject ScorePlacesText;
     public GameObject DistancePlaceText;
 
-
-    private SteamVR_Action_Boolean m_Trigger;
-    private SteamVR_Behaviour_Pose m_Pose;
-
     public ViolationSystem violationSystem;
     private bool isViolationCooldown;
     private RainScript rainScript;
 
-    private void Awake()
-    {
-        m_Trigger = SteamVR_Actions._default.InteractUI;
-
-        m_Pose = GetComponent<SteamVR_Behaviour_Pose>();
-    }
+    public ViolationMessage violationMessage;
 
     void Start()
     {
@@ -76,12 +67,14 @@ public class LaserSight : MonoBehaviour
                 gunSound.Play();
                 rightHand.GetComponent<ActivateGunLaser>().fire = false;
                 violationSystem.AddViolation();
+                violationMessage.ShowMessage("Стрельба в воздух");
                 return;
             }
 
             if (rainScript != null && rainScript.RainIntensity > 0)
             {
                 violationSystem.AddViolation();
+                violationMessage.ShowMessage("Стрельба во время дождя");
             }
 
             gunSound.Play();
@@ -143,6 +136,7 @@ public class LaserSight : MonoBehaviour
                     break;
                 case "Person":
                     violationSystem.AddViolation();
+                    violationMessage.ShowMessage("Стрельба в человека");
                     Destroy(hit.transform.gameObject);
                     break;
             }
@@ -162,6 +156,7 @@ public class LaserSight : MonoBehaviour
     {
         isViolationCooldown = true;
         violationSystem.AddViolation();
+        violationMessage.ShowMessage("Направление в человека");
         yield return new WaitForSeconds(5f);
         isViolationCooldown = false;
     }

@@ -45,6 +45,8 @@ public class ActivateGunLaser : MonoBehaviour
     [SerializeField] private GameObject zvanie3;
     [SerializeField] private GameObject Gun;
 
+    public GameObject Clock;
+
     private void Awake()
     {
         m_Trigger = SteamVR_Actions._default.InteractUI;
@@ -66,6 +68,8 @@ public class ActivateGunLaser : MonoBehaviour
 
     void Update()
     {
+        Clock.GetComponent<TextMeshPro>().text = $"{currentAmmo}/{AllAmmo}";
+
         if (m_Trigger.GetStateDown(m_Pose.inputSource) && currentAmmo == 0 && !isMoving)
         {
             Debug.Log("Патронов нет");
@@ -139,8 +143,8 @@ public class ActivateGunLaser : MonoBehaviour
     {
         if (!infiniteAmmoMode)
         {
+            AllAmmo += currentAmmo;
         }
-        AllAmmo += currentAmmo;
         currentAmmo = 0;
         Debug.Log("Оружие разряжено. Патронов: " + currentAmmo);
     }
