@@ -30,6 +30,8 @@ EditorBuildSettings:
     path: Assets/Scenes/MishenHard.unity
     guid: c985fa9ba46361147b59ad72b5586887
   m_configObjects:
+    Unity.XR.Oculus.Settings: {fileID: 11400000, guid: d7be5c7ec0702aa419ec9a1dcc02a9f9,
+      type: 2}
     Unity.XR.OpenVR.Settings: {fileID: 11400000, guid: f921fe24ec4cfe44296a2b27510d28ca,
       type: 2}
     com.unity.xr.management.loader_settings: {fileID: 11400000, guid: db0f9967a5719c249b17f8f28e34d2d5,
