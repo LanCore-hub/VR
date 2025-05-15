@@ -9331,7 +9331,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "\u041A\u043B\u0430\u0441\u0441\u043D\u0430\u044F \u043A\u043E\u043C\u043D\u0430\u0442\u0430"
+  m_text: "\u0414\u0435\u0439\u0441\u0442\u0432\u0438\u044F \u043F\u0440\u0438 \u043F\u043E\u0436\u0430\u0440\u0435"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -10261,7 +10261,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   hoverButton: {fileID: 458701318}
   loadScene: {fileID: 1582525795}
-  NameLoadScene: ClassRoom
+  NameLoadScene: SampleScene1
 --- !u!1 &1040590016
 GameObject:
   m_ObjectHideFlags: 0
@@ -15372,7 +15372,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!114 &1682432117
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -16589,7 +16589,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &1821672105
 Transform:
   m_ObjectHideFlags: 0
